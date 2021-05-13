@@ -1,0 +1,4480 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SmAddSite",
+    "description": "SmAddSite OpenAPI description",
+    "version": "111"
+  },
+  "servers": [
+    {
+      "url": "http://confd/api"
+    }
+  ],
+  "paths": {
+    "/api/debug/addsite": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Adding Site",
+        "operationId": "addSmAddSite",
+        "requestBody": {
+          "description": "SmAddSite to add to list",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SmAddSite"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmAddSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/modifysite": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Modifying Site",
+        "operationId": "addSmModifySite",
+        "requestBody": {
+          "description": "SmModifySite to add to list",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SmModifySite"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmModifySite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/deletesite": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Deleting Site",
+        "operationId": "addSmDeleteSite",
+        "requestBody": {
+          "description": "SmDeleteSite to add to list",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SmDeleteSite"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmDeleteSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/ndaddsite": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "ND Adding Site",
+        "operationId": "addSmNDAddSite",
+        "requestBody": {
+          "description": "SmNDAddSite to add to list",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SmNDAddSite"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDAddSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/config/nddeletesite": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Deleting Site",
+        "operationId": "addSmNDDeleteSite",
+        "requestBody": {
+          "description": "SmNDDeleteSite to add to list",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SmNDDeleteSite"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDDeleteSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/addsiteannotation": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Adding siteAnnotation for the site",
+        "operationId": "addSmAddSiteAnnotation",
+        "parameters": [
+          {
+            "name": "SmAddSiteAnnotation",
+            "in": "query",
+            "description": "SmAddSiteAnnotation to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmAddSiteAnnotation"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmAddSiteAnnotation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/dcnmcredential": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "DCNM loggin credentials",
+        "operationId": "addSmDcnmCredential",
+        "parameters": [
+          {
+            "name": "SmDcnmCredential",
+            "in": "query",
+            "description": "SmDcnmCredential to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmDcnmCredential"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmDcnmCredential"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/dcnmpreboard": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Pre boarding DCNM Sites",
+        "operationId": "addSmDcnmPreBoard",
+        "parameters": [
+          {
+            "name": "SmDcnmPreBoard",
+            "in": "query",
+            "description": "SmDcnmPreBoard to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmDcnmPreBoard"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmDcnmPreBoard"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/delsiteannotation": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Deleting siteAnnotation for the site",
+        "operationId": "addSmDeleteSiteAnnotation",
+        "parameters": [
+          {
+            "name": "SmDeleteSiteAnnotation",
+            "in": "query",
+            "description": "SmDeleteSiteAnnotation to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmDeleteSiteAnnotation"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmDeleteSiteAnnotation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/class/fedmember": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a list of SmFedMem",
+        "operationId": "listSmFedMem",
+        "responses": {
+          "200": {
+            "description": "Site Federation member info",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmFedMem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/fedmember": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Create a new SmFedMem",
+        "operationId": "addSmFedMem",
+        "parameters": [
+          {
+            "name": "SmFedMem",
+            "in": "query",
+            "description": "SmFedMem to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmFedMem"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Site Federation member info",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmFedMem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/dn/fedmember/{fedUUID}": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a SmFedMem based on fedUUID",
+        "operationId": "findSmFedMemByFedUUID",
+        "parameters": [
+          {
+            "name": "fedUUID",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmFedMem"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Site Federation member info",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmFedMem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/fedmember/{fedUUID}": {
+      "put": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Updates a SmFedMem based on fedUUID",
+        "operationId": "UpdateSmFedMemByFedUUID",
+        "parameters": [
+          {
+            "name": "fedUUID",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmFedMem"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Site Federation member info",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmFedMem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Deletes a SmFedMem based on fedUUID",
+        "operationId": "DeleteSmFedMem",
+        "parameters": [
+          {
+            "name": "fedUUID",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmFedMem"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "SmFedMem deleted",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmFedMem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/listndsites": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Get Local Sites in the Federation",
+        "operationId": "addSmListNDSites",
+        "parameters": [
+          {
+            "name": "SmListNDSites",
+            "in": "query",
+            "description": "SmListNDSites to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmListNDSites"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmListNDSites"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/ndcleanupsitestate": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Cleanup site processing map",
+        "operationId": "addSmNDCleanupSiteState",
+        "parameters": [
+          {
+            "name": "SmNDCleanupSiteState",
+            "in": "query",
+            "description": "SmNDCleanupSiteState to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmNDCleanupSiteState"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDCleanupSiteState"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/ndgetfedsite": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "NDGetFedSite",
+        "operationId": "addSmNDGetFedSite",
+        "parameters": [
+          {
+            "name": "SmNDGetFedSite",
+            "in": "query",
+            "description": "SmNDGetFedSite to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmNDGetFedSite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDGetFedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/ndmodifysite": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Modifying Site",
+        "operationId": "addSmNDModifySite",
+        "parameters": [
+          {
+            "name": "SmNDModifySite",
+            "in": "query",
+            "description": "SmNDModifySite to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmNDModifySite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDModifySite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/class/ndsites": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a list of SmNDSite",
+        "operationId": "listSmNDSite",
+        "responses": {
+          "200": {
+            "description": "NDSite",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/ndsites": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Create a new SmNDSite",
+        "operationId": "addSmNDSite",
+        "parameters": [
+          {
+            "name": "SmNDSite",
+            "in": "query",
+            "description": "SmNDSite to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmNDSite"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "NDSite",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/dn/ndsites/{name}": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a SmNDSite based on name",
+        "operationId": "findSmNDSiteByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmNDSite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "NDSite",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/ndsites/{name}": {
+      "put": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Updates a SmNDSite based on name",
+        "operationId": "UpdateSmNDSiteByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmNDSite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "NDSite",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDSite"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Deletes a SmNDSite based on name",
+        "operationId": "DeleteSmNDSite",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmNDSite"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "SmNDSite deleted",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmNDSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/regapp": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Registering APP with SM",
+        "operationId": "addSmRegisterApp",
+        "parameters": [
+          {
+            "name": "SmRegisterApp",
+            "in": "query",
+            "description": "SmRegisterApp to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmRegisterApp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmRegisterApp"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/class/sites": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a list of SmSite",
+        "operationId": "listSmSite",
+        "responses": {
+          "200": {
+            "description": "Site",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/sites": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Create a new SmSite",
+        "operationId": "addSmSite",
+        "parameters": [
+          {
+            "name": "SmSite",
+            "in": "query",
+            "description": "SmSite to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmSite"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Site",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/dn/sites/{name}": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a SmSite based on name",
+        "operationId": "findSmSiteByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmSite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Site",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/sites/{name}": {
+      "put": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Updates a SmSite based on name",
+        "operationId": "UpdateSmSiteByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmSite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Site",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSite"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Deletes a SmSite based on name",
+        "operationId": "DeleteSmSite",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmSite"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "SmSite deleted",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/class/siterootca": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a list of SmSiteRootCA",
+        "operationId": "listSmSiteRootCA",
+        "responses": {
+          "200": {
+            "description": "Root CA",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSiteRootCA"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/siterootca": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Create a new SmSiteRootCA",
+        "operationId": "addSmSiteRootCA",
+        "parameters": [
+          {
+            "name": "SmSiteRootCA",
+            "in": "query",
+            "description": "SmSiteRootCA to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmSiteRootCA"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Root CA",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSiteRootCA"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/dn/siterootca/{certname}": {
+      "get": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Returns a SmSiteRootCA based on certname",
+        "operationId": "findSmSiteRootCAByCertname",
+        "parameters": [
+          {
+            "name": "certname",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmSiteRootCA"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Root CA",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSiteRootCA"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/siterootca/{certname}": {
+      "put": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Updates a SmSiteRootCA based on certname",
+        "operationId": "UpdateSmSiteRootCAByCertname",
+        "parameters": [
+          {
+            "name": "certname",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmSiteRootCA"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Root CA",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSiteRootCA"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Deletes a SmSiteRootCA based on certname",
+        "operationId": "DeleteSmSiteRootCA",
+        "parameters": [
+          {
+            "name": "certname",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "$ref": "#/components/schemas/SmSiteRootCA"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "SmSiteRootCA deleted",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmSiteRootCA"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/debug/unregapp": {
+      "post": {
+        "tags": [
+          "Site Manager"
+        ],
+        "summary": "Unregistering App with SM",
+        "operationId": "addSmUnRegisterApp",
+        "parameters": [
+          {
+            "name": "SmUnRegisterApp",
+            "in": "query",
+            "description": "SmUnRegisterApp to add to list",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/SmUnRegisterApp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "allOf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SmUnRegisterApp"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SmAuthMethod": {
+        "type": "string",
+        "description": "Authentication method",
+        "enum": [
+          "{\"value\":1,\"label\":\"Cert\",\"description\":\"Cert\"}",
+          "{\"value\":2,\"label\":\"Password\",\"description\":\"Password\"}"
+        ]
+      },
+      "SmSiteStatus": {
+        "type": "string",
+        "description": "Site Status",
+        "enum": [
+          "{\"value\":1,\"label\":\"Up\",\"description\":\"up\"}",
+          "{\"value\":2,\"label\":\"Down\",\"description\":\"down\"}"
+        ]
+      },
+      "SmSite": {
+        "title": "SmSite",
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "autoConfig": {
+            "type": "boolean",
+            "description": "Auto configured"
+          },
+          "siteID": {
+            "maximum": 127,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Unique site identifier"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "authMethod": {
+            "description": "Authentication method",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAuthMethod"
+              }
+            ]
+          },
+          "snPublickKey": {
+            "type": "string",
+            "description": "SN Public key"
+          },
+          "userName": {
+            "type": "string",
+            "description": "Site App User Name"
+          },
+          "cert": {
+            "type": "string",
+            "description": "Site App Cert"
+          },
+          "privateKey": {
+            "type": "string",
+            "description": "Site App Private Key"
+          },
+          "loginName": {
+            "type": "string",
+            "description": "Controller login Name"
+          },
+          "loginPassword": {
+            "type": "string",
+            "description": "Controller login Password"
+          },
+          "loginDomain": {
+            "type": "string",
+            "description": "Controller login Domain"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          },
+          "userConfig": {
+            "type": "boolean",
+            "description": "SM Produced"
+          },
+          "siteStatus": {
+            "description": "Site Status",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteStatus"
+              }
+            ]
+          },
+          "apps": {
+            "minItems": 0,
+            "type": "array",
+            "description": "apps",
+            "items": {
+              "description": "Member Apps",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmAppInfo"
+                }
+              ]
+            }
+          },
+          "controllers": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Controllers",
+            "items": {
+              "description": "Member Controller",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmController"
+                }
+              ]
+            }
+          },
+          "serviceDiscovery": {
+            "minItems": 0,
+            "type": "array",
+            "description": "service Discovery",
+            "items": {
+              "description": "Member Controller",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmServiceDiscovery"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "Site"
+      },
+      "_SmSite": {
+        "title": "SmSite",
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "autoConfig": {
+            "type": "boolean",
+            "description": "Auto configured"
+          },
+          "siteID": {
+            "maximum": 127,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Unique site identifier"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "authMethod": {
+            "description": "Authentication method",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAuthMethod"
+              }
+            ]
+          },
+          "snPublickKey": {
+            "type": "string",
+            "description": "SN Public key"
+          },
+          "userName": {
+            "type": "string",
+            "description": "Site App User Name"
+          },
+          "cert": {
+            "type": "string",
+            "description": "Site App Cert"
+          },
+          "privateKey": {
+            "type": "string",
+            "description": "Site App Private Key"
+          },
+          "loginName": {
+            "type": "string",
+            "description": "Controller login Name"
+          },
+          "loginPassword": {
+            "type": "string",
+            "description": "Controller login Password"
+          },
+          "loginDomain": {
+            "type": "string",
+            "description": "Controller login Domain"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          },
+          "userConfig": {
+            "type": "boolean",
+            "description": "SM Produced"
+          },
+          "siteStatus": {
+            "description": "Site Status",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteStatus"
+              }
+            ]
+          },
+          "apps": {
+            "minItems": 0,
+            "type": "array",
+            "description": "apps",
+            "items": {
+              "description": "Member Apps",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmAppInfo"
+                }
+              ]
+            }
+          },
+          "controllers": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Controllers",
+            "items": {
+              "description": "Member Controller",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmController"
+                }
+              ]
+            }
+          },
+          "serviceDiscovery": {
+            "minItems": 0,
+            "type": "array",
+            "description": "service Discovery",
+            "items": {
+              "description": "Member Controller",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmServiceDiscovery"
+                }
+              ]
+            }
+          }
+        },
+        "description": "Site For inheritance only, Do not use separately"
+      },
+      "SmServiceDiscovery": {
+        "title": "SmServiceDiscovery",
+        "type": "object",
+        "properties": {
+          "hostName": {
+            "type": "string",
+            "description": "host Name"
+          },
+          "port": {
+            "type": "string",
+            "description": "Port"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Service Discovery"
+      },
+      "_SmServiceDiscovery": {
+        "title": "SmServiceDiscovery",
+        "type": "object",
+        "properties": {
+          "hostName": {
+            "type": "string",
+            "description": "host Name"
+          },
+          "port": {
+            "type": "string",
+            "description": "Port"
+          }
+        },
+        "description": "Service Discovery For inheritance only, Do not use separately"
+      },
+      "SmState": {
+        "type": "string",
+        "description": "State represents the operational state of the addSite/deleteSite action",
+        "enum": [
+          "{\"value\":0,\"label\":\"Triggered\",\"description\":\"addSite/deleteSite action has been triggered\"}",
+          "{\"value\":1,\"label\":\"Success\",\"description\":\"addSite/deleteSite action completed successfully\"}",
+          "{\"value\":2,\"label\":\"Failed\",\"description\":\"addSite/deleteSite action failed\"}"
+        ]
+      },
+      "SmStatus": {
+        "title": "SmStatus",
+        "type": "object",
+        "properties": {
+          "state": {
+            "description": "State represents the operational state of the addsite/deletesite action",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmState"
+              }
+            ]
+          },
+          "stateDescription": {
+            "type": "string",
+            "description": "State description provides additional details about the operational state"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Add site/Delete site action status"
+      },
+      "_SmStatus": {
+        "title": "SmStatus",
+        "type": "object",
+        "properties": {
+          "state": {
+            "description": "State represents the operational state of the addsite/deletesite action",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmState"
+              }
+            ]
+          },
+          "stateDescription": {
+            "type": "string",
+            "description": "State description provides additional details about the operational state"
+          }
+        },
+        "description": "Add site/Delete site action status For inheritance only, Do not use separately"
+      },
+      "SmRegisterApp": {
+        "title": "SmRegisterApp",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "appName": {
+            "type": "string",
+            "description": "APP Name"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          },
+          "vendor": {
+            "type": "string",
+            "description": "Vendor"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Registering APP with SM"
+      },
+      "_SmRegisterApp": {
+        "title": "SmRegisterApp",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "appName": {
+            "type": "string",
+            "description": "APP Name"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          },
+          "vendor": {
+            "type": "string",
+            "description": "Vendor"
+          }
+        },
+        "description": "Registering APP with SM For inheritance only, Do not use separately"
+      },
+      "SmUnRegisterApp": {
+        "title": "SmUnRegisterApp",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "appName": {
+            "type": "string",
+            "description": "APP Name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Unregistering App with SM"
+      },
+      "_SmUnRegisterApp": {
+        "title": "SmUnRegisterApp",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "appName": {
+            "type": "string",
+            "description": "APP Name"
+          }
+        },
+        "description": "Unregistering App with SM For inheritance only, Do not use separately"
+      },
+      "SmAddSiteAnnotation": {
+        "title": "SmAddSiteAnnotation",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "annotation": {
+            "type": "object",
+            "description": "Member Annotation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Adding siteAnnotation for the site"
+      },
+      "_SmAddSiteAnnotation": {
+        "title": "SmAddSiteAnnotation",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "annotation": {
+            "type": "object",
+            "description": "Member Annotation"
+          }
+        },
+        "description": "Adding siteAnnotation for the site For inheritance only, Do not use separately"
+      },
+      "SmDeleteSiteAnnotation": {
+        "title": "SmDeleteSiteAnnotation",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "key": {
+            "type": "string",
+            "description": "key"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Deleting siteAnnotation for the site"
+      },
+      "_SmDeleteSiteAnnotation": {
+        "title": "SmDeleteSiteAnnotation",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "key": {
+            "type": "string",
+            "description": "key"
+          }
+        },
+        "description": "Deleting siteAnnotation for the site For inheritance only, Do not use separately"
+      },
+      "SmListNDSites": {
+        "title": "SmListNDSites",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "filter": {
+            "type": "string",
+            "description": "Site list filter"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Get Local Sites in the Federation"
+      },
+      "_SmListNDSites": {
+        "title": "SmListNDSites",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "filter": {
+            "type": "string",
+            "description": "Site list filter"
+          }
+        },
+        "description": "Get Local Sites in the Federation For inheritance only, Do not use separately"
+      },
+      "SmFedMem": {
+        "title": "SmFedMem",
+        "required": [
+          "fedUUID"
+        ],
+        "type": "object",
+        "properties": {
+          "fedUUID": {
+            "type": "string",
+            "description": "fed member uuid"
+          },
+          "master": {
+            "type": "boolean",
+            "description": "Master of the federation"
+          },
+          "name": {
+            "type": "string",
+            "description": "fqdn/hostname of ND Federation member/master"
+          },
+          "local": {
+            "type": "boolean",
+            "description": "is member local nd cluster"
+          },
+          "clusterInfo": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Cluster info",
+            "items": {
+              "description": "Cluster",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmSiteClusterInfo"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "Site Federation member info"
+      },
+      "_SmFedMem": {
+        "title": "SmFedMem",
+        "required": [
+          "fedUUID"
+        ],
+        "type": "object",
+        "properties": {
+          "fedUUID": {
+            "type": "string",
+            "description": "fed member uuid"
+          },
+          "master": {
+            "type": "boolean",
+            "description": "Master of the federation"
+          },
+          "name": {
+            "type": "string",
+            "description": "fqdn/hostname of ND Federation member/master"
+          },
+          "local": {
+            "type": "boolean",
+            "description": "is member local nd cluster"
+          },
+          "clusterInfo": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Cluster info",
+            "items": {
+              "description": "Cluster",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmSiteClusterInfo"
+                }
+              ]
+            }
+          }
+        },
+        "description": "Site Federation member info For inheritance only, Do not use separately"
+      },
+      "SmNDSite": {
+        "title": "SmNDSite",
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display Name"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "updTimeStamp": {
+            "type": "string",
+            "description": "Site last updated"
+          },
+          "apps": {
+            "minItems": 0,
+            "type": "array",
+            "description": "apps",
+            "items": {
+              "description": "Member Apps",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmAppInfo"
+                }
+              ]
+            }
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "siteHealth": {
+            "type": "string",
+            "description": "Site Health"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "verifySecure": {
+            "type": "boolean",
+            "description": "Verify Root CA"
+          },
+          "caName": {
+            "type": "string",
+            "description": "CA Name"
+          },
+          "userConfig": {
+            "type": "boolean",
+            "description": "SM Produced"
+          },
+          "siteReachabilty": {
+            "description": "Site Reachability Status",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteReachabiltyStatus"
+              }
+            ]
+          },
+          "controllers": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Controllers",
+            "items": {
+              "description": "Member Controller",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmNDController"
+                }
+              ]
+            }
+          },
+          "jwtapikeys": {
+            "type": "object",
+            "description": "Member jwt api key"
+          },
+          "aci": {
+            "description": "Member APIC ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciSite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmSite"
+              }
+            ]
+          },
+          "cloudAci": {
+            "description": "Member cloud ACI ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmCloudAciSite"
+              }
+            ]
+          },
+          "fedInfo": {
+            "description": "Site Federation Info ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteFedInfo"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "NDSite"
+      },
+      "_SmNDSite": {
+        "title": "SmNDSite",
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display Name"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "updTimeStamp": {
+            "type": "string",
+            "description": "Site last updated"
+          },
+          "apps": {
+            "minItems": 0,
+            "type": "array",
+            "description": "apps",
+            "items": {
+              "description": "Member Apps",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmAppInfo"
+                }
+              ]
+            }
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "siteHealth": {
+            "type": "string",
+            "description": "Site Health"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "verifySecure": {
+            "type": "boolean",
+            "description": "Verify Root CA"
+          },
+          "caName": {
+            "type": "string",
+            "description": "CA Name"
+          },
+          "userConfig": {
+            "type": "boolean",
+            "description": "SM Produced"
+          },
+          "siteReachabilty": {
+            "description": "Site Reachability Status",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteReachabiltyStatus"
+              }
+            ]
+          },
+          "controllers": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Controllers",
+            "items": {
+              "description": "Member Controller",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmNDController"
+                }
+              ]
+            }
+          },
+          "jwtapikeys": {
+            "type": "object",
+            "description": "Member jwt api key"
+          },
+          "aci": {
+            "description": "Member APIC ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciSite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmSite"
+              }
+            ]
+          },
+          "cloudAci": {
+            "description": "Member cloud ACI ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmCloudAciSite"
+              }
+            ]
+          },
+          "fedInfo": {
+            "description": "Site Federation Info ",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteFedInfo"
+              }
+            ]
+          }
+        },
+        "description": "NDSite For inheritance only, Do not use separately"
+      },
+      "SmJWTApiKey": {
+        "title": "SmJWTApiKey",
+        "required": [
+          "jwtAPIKey"
+        ],
+        "type": "object",
+        "properties": {
+          "jwtAPIKey": {
+            "type": "string",
+            "description": "JWT API Key"
+          },
+          "value": {
+            "type": "boolean",
+            "description": " API Key provisoned"
+          }
+        },
+        "additionalProperties": false,
+        "description": "JWT api keys used"
+      },
+      "_SmJWTApiKey": {
+        "title": "SmJWTApiKey",
+        "required": [
+          "jwtAPIKey"
+        ],
+        "type": "object",
+        "properties": {
+          "jwtAPIKey": {
+            "type": "string",
+            "description": "JWT API Key"
+          },
+          "value": {
+            "type": "boolean",
+            "description": " API Key provisoned"
+          }
+        },
+        "description": "JWT api keys used For inheritance only, Do not use separately"
+      },
+      "SmSiteFedInfo": {
+        "title": "SmSiteFedInfo",
+        "type": "object",
+        "properties": {
+          "local": {
+            "type": "boolean",
+            "description": "Site Provisioned/Owned by local ND"
+          },
+          "name": {
+            "type": "string",
+            "description": "name of the fed member own this site"
+          },
+          "siteUUID": {
+            "type": "string",
+            "description": "uuid of the site"
+          },
+          "fedMemUUID": {
+            "type": "string",
+            "description": "uuid of the federation member"
+          },
+          "siteFingerprint": {
+            "type": "string",
+            "description": "Site Fingerprint"
+          },
+          "annotation": {
+            "type": "object",
+            "description": "Member Annotation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Site Federation Info"
+      },
+      "_SmSiteFedInfo": {
+        "title": "SmSiteFedInfo",
+        "type": "object",
+        "properties": {
+          "local": {
+            "type": "boolean",
+            "description": "Site Provisioned/Owned by local ND"
+          },
+          "name": {
+            "type": "string",
+            "description": "name of the fed member own this site"
+          },
+          "siteUUID": {
+            "type": "string",
+            "description": "uuid of the site"
+          },
+          "fedMemUUID": {
+            "type": "string",
+            "description": "uuid of the federation member"
+          },
+          "siteFingerprint": {
+            "type": "string",
+            "description": "Site Fingerprint"
+          },
+          "annotation": {
+            "type": "object",
+            "description": "Member Annotation"
+          }
+        },
+        "description": "Site Federation Info For inheritance only, Do not use separately"
+      },
+      "SmAnnotation": {
+        "title": "SmAnnotation",
+        "required": [
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Annotation Key"
+          },
+          "value": {
+            "type": "string",
+            "description": "value"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Annotation used by APPS"
+      },
+      "_SmAnnotation": {
+        "title": "SmAnnotation",
+        "required": [
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Annotation Key"
+          },
+          "value": {
+            "type": "string",
+            "description": "value"
+          }
+        },
+        "description": "Annotation used by APPS For inheritance only, Do not use separately"
+      },
+      "SmSiteClusterInfo": {
+        "title": "SmSiteClusterInfo",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Cluster node name"
+          },
+          "dataIP": {
+            "type": "string",
+            "description": "Inband IP"
+          },
+          "mgmtIP": {
+            "type": "string",
+            "description": "Inband IP"
+          },
+          "serial": {
+            "type": "string",
+            "description": "Serial Number"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Site Cluster Info"
+      },
+      "_SmSiteClusterInfo": {
+        "title": "SmSiteClusterInfo",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Cluster node name"
+          },
+          "dataIP": {
+            "type": "string",
+            "description": "Inband IP"
+          },
+          "mgmtIP": {
+            "type": "string",
+            "description": "Inband IP"
+          },
+          "serial": {
+            "type": "string",
+            "description": "Serial Number"
+          }
+        },
+        "description": "Site Cluster Info For inheritance only, Do not use separately"
+      },
+      "SmAciSite": {
+        "title": "SmAciSite",
+        "type": "object",
+        "properties": {
+          "snPublicKey": {
+            "type": "string",
+            "description": "ACI Public key"
+          },
+          "appUserName": {
+            "type": "string",
+            "description": "Site App User Name"
+          },
+          "cert": {
+            "type": "string",
+            "description": "Site App Cert"
+          },
+          "privateKey": {
+            "type": "string",
+            "description": "Site App Private Key"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          },
+          "switches": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Switches",
+            "items": {
+              "description": "Member Switches",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmSwitch"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "ACI site"
+      },
+      "_SmAciSite": {
+        "title": "SmAciSite",
+        "type": "object",
+        "properties": {
+          "snPublicKey": {
+            "type": "string",
+            "description": "ACI Public key"
+          },
+          "appUserName": {
+            "type": "string",
+            "description": "Site App User Name"
+          },
+          "cert": {
+            "type": "string",
+            "description": "Site App Cert"
+          },
+          "privateKey": {
+            "type": "string",
+            "description": "Site App Private Key"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          },
+          "switches": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Switches",
+            "items": {
+              "description": "Member Switches",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmSwitch"
+                }
+              ]
+            }
+          }
+        },
+        "description": "ACI site For inheritance only, Do not use separately"
+      },
+      "SmNDController": {
+        "title": "SmNDController",
+        "type": "object",
+        "properties": {
+          "mgmtIP": {
+            "type": "string",
+            "description": "Mgmt IP Address"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "dataIP": {
+            "type": "string",
+            "description": "Data/Inband IP Address"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL Info"
+          },
+          "mgmtUrl": {
+            "type": "string",
+            "description": "mgmt URL Info"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          },
+          "fabDomain": {
+            "type": "string",
+            "description": "Fabric Domain"
+          },
+          "systemUptime": {
+            "type": "string",
+            "description": "Uptime of the Controller"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of Controller"
+          }
+        },
+        "additionalProperties": false,
+        "description": "ND Controllers"
+      },
+      "_SmNDController": {
+        "title": "SmNDController",
+        "type": "object",
+        "properties": {
+          "mgmtIP": {
+            "type": "string",
+            "description": "Mgmt IP Address"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "dataIP": {
+            "type": "string",
+            "description": "Data/Inband IP Address"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL Info"
+          },
+          "mgmtUrl": {
+            "type": "string",
+            "description": "mgmt URL Info"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          },
+          "fabDomain": {
+            "type": "string",
+            "description": "Fabric Domain"
+          },
+          "systemUptime": {
+            "type": "string",
+            "description": "Uptime of the Controller"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of Controller"
+          }
+        },
+        "description": "ND Controllers For inheritance only, Do not use separately"
+      },
+      "SmCloudAciSite": {
+        "title": "SmCloudAciSite",
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "description": "Cloud Provider"
+          },
+          "regionCount": {
+            "type": "string",
+            "description": "Region Count"
+          },
+          "vpcCount": {
+            "type": "string",
+            "description": "VPC Count"
+          },
+          "virtualNetworkCount": {
+            "type": "string",
+            "description": "Virtual Network Count"
+          },
+          "routerCount": {
+            "type": "string",
+            "description": "Router Count"
+          },
+          "region": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Regions",
+            "items": {
+              "description": "Member regions",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmRegion"
+                }
+              ]
+            }
+          },
+          "vpc": {
+            "minItems": 0,
+            "type": "array",
+            "description": "vpc",
+            "items": {
+              "description": "Member VPC",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmVpc"
+                }
+              ]
+            }
+          },
+          "virtnet": {
+            "minItems": 0,
+            "type": "array",
+            "description": "virtnet",
+            "items": {
+              "description": "Member VirtualNetwork",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmVirtualNetwork"
+                }
+              ]
+            }
+          },
+          "router": {
+            "minItems": 0,
+            "type": "array",
+            "description": "router",
+            "items": {
+              "description": "Member Router",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmRouter"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "Cloud ACI site"
+      },
+      "_SmCloudAciSite": {
+        "title": "SmCloudAciSite",
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "description": "Cloud Provider"
+          },
+          "regionCount": {
+            "type": "string",
+            "description": "Region Count"
+          },
+          "vpcCount": {
+            "type": "string",
+            "description": "VPC Count"
+          },
+          "virtualNetworkCount": {
+            "type": "string",
+            "description": "Virtual Network Count"
+          },
+          "routerCount": {
+            "type": "string",
+            "description": "Router Count"
+          },
+          "region": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Regions",
+            "items": {
+              "description": "Member regions",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmRegion"
+                }
+              ]
+            }
+          },
+          "vpc": {
+            "minItems": 0,
+            "type": "array",
+            "description": "vpc",
+            "items": {
+              "description": "Member VPC",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmVpc"
+                }
+              ]
+            }
+          },
+          "virtnet": {
+            "minItems": 0,
+            "type": "array",
+            "description": "virtnet",
+            "items": {
+              "description": "Member VirtualNetwork",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmVirtualNetwork"
+                }
+              ]
+            }
+          },
+          "router": {
+            "minItems": 0,
+            "type": "array",
+            "description": "router",
+            "items": {
+              "description": "Member Router",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmRouter"
+                }
+              ]
+            }
+          }
+        },
+        "description": "Cloud ACI site For inheritance only, Do not use separately"
+      },
+      "SmRegion": {
+        "title": "SmRegion",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "description": "Region Display Name"
+          },
+          "adminState": {
+            "type": "string",
+            "description": "Administrative State"
+          },
+          "deployed": {
+            "type": "string",
+            "description": "Cloud APIC deployed "
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of Region"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Region Information"
+      },
+      "_SmRegion": {
+        "title": "SmRegion",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "description": "Region Display Name"
+          },
+          "adminState": {
+            "type": "string",
+            "description": "Administrative State"
+          },
+          "deployed": {
+            "type": "string",
+            "description": "Cloud APIC deployed "
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of Region"
+          }
+        },
+        "description": "Region Information For inheritance only, Do not use separately"
+      },
+      "SmVpc": {
+        "title": "SmVpc",
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "description": "VPC Information"
+      },
+      "_SmVpc": {
+        "title": "SmVpc",
+        "type": "object",
+        "properties": {},
+        "description": "VPC Information For inheritance only, Do not use separately"
+      },
+      "SmVirtualNetwork": {
+        "title": "SmVirtualNetwork",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of Virtual Network"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Virtual Network Information"
+      },
+      "_SmVirtualNetwork": {
+        "title": "SmVirtualNetwork",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of Virtual Network"
+          }
+        },
+        "description": "Virtual Network Information For inheritance only, Do not use separately"
+      },
+      "SmRouter": {
+        "title": "SmRouter",
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "description": "Router Information"
+      },
+      "_SmRouter": {
+        "title": "SmRouter",
+        "type": "object",
+        "properties": {},
+        "description": "Router Information For inheritance only, Do not use separately"
+      },
+      "SmDcnmSite": {
+        "title": "SmDcnmSite",
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "DCNM login name"
+          },
+          "password": {
+            "type": "string",
+            "description": "DCNM login passwd"
+          },
+          "dcnmPublicKey": {
+            "type": "string",
+            "description": "DCNM public key for Kafka"
+          },
+          "fabricName": {
+            "type": "string",
+            "description": "Fabric Name"
+          },
+          "fabricType": {
+            "description": "DCNM Fabric type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricType"
+              }
+            ]
+          },
+          "fabricTechnology": {
+            "description": "DCNM Fabric Technology",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricTechnology"
+              }
+            ]
+          },
+          "dcnmFabricSiteID": {
+            "type": "string",
+            "description": " DCNM Site Id"
+          },
+          "fabricReadOnly": {
+            "type": "boolean",
+            "description": "Read only fabric"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of switch fabric"
+          },
+          "switches": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Switches",
+            "items": {
+              "description": "Member DCNM switches",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDcnmSwitch"
+                }
+              ]
+            }
+          },
+          "ha": {
+            "description": "HA Info",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmHAInfo"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM Site"
+      },
+      "_SmDcnmSite": {
+        "title": "SmDcnmSite",
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "DCNM login name"
+          },
+          "password": {
+            "type": "string",
+            "description": "DCNM login passwd"
+          },
+          "dcnmPublicKey": {
+            "type": "string",
+            "description": "DCNM public key for Kafka"
+          },
+          "fabricName": {
+            "type": "string",
+            "description": "Fabric Name"
+          },
+          "fabricType": {
+            "description": "DCNM Fabric type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricType"
+              }
+            ]
+          },
+          "fabricTechnology": {
+            "description": "DCNM Fabric Technology",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricTechnology"
+              }
+            ]
+          },
+          "dcnmFabricSiteID": {
+            "type": "string",
+            "description": " DCNM Site Id"
+          },
+          "fabricReadOnly": {
+            "type": "boolean",
+            "description": "Read only fabric"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of switch fabric"
+          },
+          "switches": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Switches",
+            "items": {
+              "description": "Member DCNM switches",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDcnmSwitch"
+                }
+              ]
+            }
+          },
+          "ha": {
+            "description": "HA Info",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmHAInfo"
+              }
+            ]
+          }
+        },
+        "description": "DCNM Site For inheritance only, Do not use separately"
+      },
+      "SmDcnmHaMode": {
+        "type": "string",
+        "description": "DCNM HA Mode",
+        "enum": [
+          "{\"value\":0,\"label\":\"Active\",\"description\":\"active\"}",
+          "{\"value\":1,\"label\":\"Standby\",\"description\":\"standby\"}",
+          "{\"value\":2,\"label\":\"Standalone\",\"description\":\"standalone\"}"
+        ]
+      },
+      "SmDcnmFabricType": {
+        "type": "string",
+        "description": "DCNM Fabric Type",
+        "enum": [
+          "{\"value\":0,\"label\":\"SwitchFabric\",\"description\":\"switchFabric\"}",
+          "{\"value\":1,\"label\":\"External\",\"description\":\"external\"}"
+        ]
+      },
+      "SmDcnmFabricTechnology": {
+        "type": "string",
+        "description": "DCNM Fabric Technology",
+        "enum": [
+          "{\"value\":0,\"label\":\"VxlanFabric\",\"description\":\"vxlanFabric\"}",
+          "{\"value\":1,\"label\":\"External\",\"description\":\"external\"}"
+        ]
+      },
+      "SmDcnmSwitch": {
+        "title": "SmDcnmSwitch",
+        "type": "object",
+        "properties": {
+          "switchType": {
+            "type": "string",
+            "description": "Switch Type"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "model": {
+            "type": "string",
+            "description": "Switch Model"
+          },
+          "version": {
+            "type": "string",
+            "description": "Switch Firmware Version"
+          },
+          "mgmtIP": {
+            "type": "string",
+            "description": "Mgmt IP Address"
+          },
+          "systemUptime": {
+            "type": "string",
+            "description": "Uptime of the Switch"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of switch"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Switch Information"
+      },
+      "_SmDcnmSwitch": {
+        "title": "SmDcnmSwitch",
+        "type": "object",
+        "properties": {
+          "switchType": {
+            "type": "string",
+            "description": "Switch Type"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "model": {
+            "type": "string",
+            "description": "Switch Model"
+          },
+          "version": {
+            "type": "string",
+            "description": "Switch Firmware Version"
+          },
+          "mgmtIP": {
+            "type": "string",
+            "description": "Mgmt IP Address"
+          },
+          "systemUptime": {
+            "type": "string",
+            "description": "Uptime of the Switch"
+          },
+          "health": {
+            "type": "string",
+            "description": "Health of switch"
+          }
+        },
+        "description": "Switch Information For inheritance only, Do not use separately"
+      },
+      "SmDcnmHAInfo": {
+        "title": "SmDcnmHAInfo",
+        "type": "object",
+        "properties": {
+          "dcnm": {
+            "minItems": 0,
+            "type": "array",
+            "description": "HA",
+            "items": {
+              "description": "Member HA",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDcnmHA"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM HA Info"
+      },
+      "_SmDcnmHAInfo": {
+        "title": "SmDcnmHAInfo",
+        "type": "object",
+        "properties": {
+          "dcnm": {
+            "minItems": 0,
+            "type": "array",
+            "description": "HA",
+            "items": {
+              "description": "Member HA",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDcnmHA"
+                }
+              ]
+            }
+          }
+        },
+        "description": "DCNM HA Info For inheritance only, Do not use separately"
+      },
+      "SmDcnmHA": {
+        "title": "SmDcnmHA",
+        "type": "object",
+        "properties": {
+          "mode": {
+            "description": "Mode",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmHaMode"
+              }
+            ]
+          },
+          "outofbandIP": {
+            "type": "string",
+            "description": "Outofband IP Address"
+          },
+          "inbandIP": {
+            "type": "string",
+            "description": "Inband IP Address"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM HA details"
+      },
+      "_SmDcnmHA": {
+        "title": "SmDcnmHA",
+        "type": "object",
+        "properties": {
+          "mode": {
+            "description": "Mode",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmHaMode"
+              }
+            ]
+          },
+          "outofbandIP": {
+            "type": "string",
+            "description": "Outofband IP Address"
+          },
+          "inbandIP": {
+            "type": "string",
+            "description": "Inband IP Address"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          }
+        },
+        "description": "DCNM HA details For inheritance only, Do not use separately"
+      },
+      "SmSiteType": {
+        "type": "string",
+        "description": "Type of the site",
+        "enum": [
+          "{\"value\":0,\"label\":\"ACI\",\"description\":\"ACI\"}",
+          "{\"value\":1,\"label\":\"DCNM\",\"description\":\"DCNM\"}",
+          "{\"value\":2,\"label\":\"ThirdParty\",\"description\":\"External Service Endpoint\"}",
+          "{\"value\":3,\"label\":\"CloudACI\",\"description\":\"Cloud ACI\"}"
+        ]
+      },
+      "SmAppInfo": {
+        "title": "SmAppInfo",
+        "type": "object",
+        "properties": {
+          "appName": {
+            "type": "string",
+            "description": "APP Name"
+          },
+          "version": {
+            "type": "string",
+            "description": "APP Version"
+          },
+          "vendor": {
+            "type": "string",
+            "description": "Vendor"
+          }
+        },
+        "additionalProperties": false,
+        "description": "App Info"
+      },
+      "_SmAppInfo": {
+        "title": "SmAppInfo",
+        "type": "object",
+        "properties": {
+          "appName": {
+            "type": "string",
+            "description": "APP Name"
+          },
+          "version": {
+            "type": "string",
+            "description": "APP Version"
+          },
+          "vendor": {
+            "type": "string",
+            "description": "Vendor"
+          }
+        },
+        "description": "App Info For inheritance only, Do not use separately"
+      },
+      "SmSiteState": {
+        "type": "string",
+        "description": "Site state",
+        "enum": [
+          "{\"value\":0,\"label\":\"Unknown\",\"description\":\"unknown\"}",
+          "{\"value\":1,\"label\":\"Up\",\"description\":\"up\"}",
+          "{\"value\":2,\"label\":\"Down\",\"description\":\"down\"}"
+        ]
+      },
+      "SmControllerState": {
+        "type": "string",
+        "description": "Controller State",
+        "enum": [
+          "{\"value\":0,\"label\":\"Up\",\"description\":\"up\"}",
+          "{\"value\":1,\"label\":\"Down\",\"description\":\"down\"}"
+        ]
+      },
+      "SmNodeReachabilityStatus": {
+        "title": "SmNodeReachabilityStatus",
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "string",
+            "description": "IP Address of Node"
+          },
+          "state": {
+            "description": "State",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmControllerState"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Node Reachability Status"
+      },
+      "_SmNodeReachabilityStatus": {
+        "title": "SmNodeReachabilityStatus",
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "string",
+            "description": "IP Address of Node"
+          },
+          "state": {
+            "description": "State",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmControllerState"
+              }
+            ]
+          }
+        },
+        "description": "Node Reachability Status For inheritance only, Do not use separately"
+      },
+      "SmSiteReachabiltyStatus": {
+        "title": "SmSiteReachabiltyStatus",
+        "type": "object",
+        "properties": {
+          "state": {
+            "description": "State",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteState"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Site status description"
+          },
+          "nodeReachability": {
+            "minItems": 0,
+            "type": "array",
+            "description": "nodes",
+            "items": {
+              "description": "Member Nodes",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmNodeReachabilityStatus"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "Site Reachability Status"
+      },
+      "_SmSiteReachabiltyStatus": {
+        "title": "SmSiteReachabiltyStatus",
+        "type": "object",
+        "properties": {
+          "state": {
+            "description": "State",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteState"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Site status description"
+          },
+          "nodeReachability": {
+            "minItems": 0,
+            "type": "array",
+            "description": "nodes",
+            "items": {
+              "description": "Member Nodes",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmNodeReachabilityStatus"
+                }
+              ]
+            }
+          }
+        },
+        "description": "Site Reachability Status For inheritance only, Do not use separately"
+      },
+      "SmController": {
+        "title": "SmController",
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "string",
+            "description": "IP Address"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "inbandIP": {
+            "type": "string",
+            "description": "Inband IP Address"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          },
+          "fabDomain": {
+            "type": "string",
+            "description": "Fabric Domain"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Controller"
+      },
+      "_SmController": {
+        "title": "SmController",
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "string",
+            "description": "IP Address"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "inbandIP": {
+            "type": "string",
+            "description": "Inband IP Address"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version"
+          },
+          "fabDomain": {
+            "type": "string",
+            "description": "Fabric Domain"
+          }
+        },
+        "description": "Controller For inheritance only, Do not use separately"
+      },
+      "SmSwitch": {
+        "title": "SmSwitch",
+        "type": "object",
+        "properties": {
+          "switchType": {
+            "type": "string",
+            "description": "Switch Type"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "model": {
+            "type": "string",
+            "description": "Switch Model"
+          },
+          "version": {
+            "type": "string",
+            "description": "Switch Firmware Version"
+          },
+          "inbandIP": {
+            "type": "string",
+            "description": "Inband IP Address"
+          },
+          "outofbandIP": {
+            "type": "string",
+            "description": "Out of band IP Address"
+          },
+          "fabricMac": {
+            "type": "string",
+            "description": "Fabric MAC Address"
+          },
+          "systemUptime": {
+            "type": "string",
+            "description": "Uptime of the Switch"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Switch Information"
+      },
+      "_SmSwitch": {
+        "title": "SmSwitch",
+        "type": "object",
+        "properties": {
+          "switchType": {
+            "type": "string",
+            "description": "Switch Type"
+          },
+          "sn": {
+            "type": "string",
+            "description": "Serial Number"
+          },
+          "model": {
+            "type": "string",
+            "description": "Switch Model"
+          },
+          "version": {
+            "type": "string",
+            "description": "Switch Firmware Version"
+          },
+          "inbandIP": {
+            "type": "string",
+            "description": "Inband IP Address"
+          },
+          "outofbandIP": {
+            "type": "string",
+            "description": "Out of band IP Address"
+          },
+          "fabricMac": {
+            "type": "string",
+            "description": "Fabric MAC Address"
+          },
+          "systemUptime": {
+            "type": "string",
+            "description": "Uptime of the Switch"
+          }
+        },
+        "description": "Switch Information For inheritance only, Do not use separately"
+      },
+      "SmAddSite": {
+        "title": "SmAddSite",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteID": {
+            "maximum": 127,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Unique site identifier"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "iplist": {
+            "minItems": 0,
+            "type": "array",
+            "description": "IP List",
+            "items": {
+              "type": "string",
+              "description": "IP Address"
+            }
+          },
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Adding Site"
+      },
+      "_SmAddSite": {
+        "title": "SmAddSite",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "siteID": {
+            "maximum": 127,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Unique site identifier"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "iplist": {
+            "minItems": 0,
+            "type": "array",
+            "description": "IP List",
+            "items": {
+              "type": "string",
+              "description": "IP Address"
+            }
+          },
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "description": "Adding Site For inheritance only, Do not use separately"
+      },
+      "SmAciAddSite": {
+        "title": "SmAciAddSite",
+        "type": "object",
+        "properties": {
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "additionalProperties": false,
+        "description": "APIC related addsite info"
+      },
+      "_SmAciAddSite": {
+        "title": "SmAciAddSite",
+        "type": "object",
+        "properties": {
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "description": "APIC related addsite info For inheritance only, Do not use separately"
+      },
+      "SmDCNMAddMultiSite": {
+        "title": "SmDCNMAddMultiSite",
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          },
+          "siteList": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Site List",
+            "items": {
+              "description": "Member DCNM Site ",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDCNMAddSite"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM Add Multisite"
+      },
+      "_SmDCNMAddMultiSite": {
+        "title": "SmDCNMAddMultiSite",
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          },
+          "siteList": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Site List",
+            "items": {
+              "description": "Member DCNM Site ",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDCNMAddSite"
+                }
+              ]
+            }
+          }
+        },
+        "description": "DCNM Add Multisite For inheritance only, Do not use separately"
+      },
+      "SmDCNMAddSite": {
+        "title": "SmDCNMAddSite",
+        "type": "object",
+        "properties": {
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "fabricName": {
+            "type": "string",
+            "description": "Fabric Name"
+          },
+          "fabricType": {
+            "description": "DCNM Fabric type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricType"
+              }
+            ]
+          },
+          "fabricTechnology": {
+            "description": "DCNM Fabric Technology",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricTechnology"
+              }
+            ]
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM Addsite info"
+      },
+      "_SmDCNMAddSite": {
+        "title": "SmDCNMAddSite",
+        "type": "object",
+        "properties": {
+          "siteName": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "fabricName": {
+            "type": "string",
+            "description": "Fabric Name"
+          },
+          "fabricType": {
+            "description": "DCNM Fabric type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricType"
+              }
+            ]
+          },
+          "fabricTechnology": {
+            "description": "DCNM Fabric Technology",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricTechnology"
+              }
+            ]
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          }
+        },
+        "description": "DCNM Addsite info For inheritance only, Do not use separately"
+      },
+      "SmNDAddSite": {
+        "title": "SmNDAddSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display Name"
+          },
+          "forceAdd": {
+            "type": "boolean",
+            "description": "Force Add site"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "siteFingerprint": {
+            "type": "string",
+            "description": "Site Fingerprint"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "verifySecure": {
+            "type": "boolean",
+            "description": "Verify Root CA"
+          },
+          "caName": {
+            "type": "string",
+            "description": "CA Name"
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "aci": {
+            "description": "Member APIC",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciAddSite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDCNMAddMultiSite"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Adding Site"
+      },
+      "_SmNDAddSite": {
+        "title": "SmNDAddSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display Name"
+          },
+          "forceAdd": {
+            "type": "boolean",
+            "description": "Force Add site"
+          },
+          "siteType": {
+            "description": "Site Type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmSiteType"
+              }
+            ]
+          },
+          "siteFingerprint": {
+            "type": "string",
+            "description": "Site Fingerprint"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "verifySecure": {
+            "type": "boolean",
+            "description": "Verify Root CA"
+          },
+          "caName": {
+            "type": "string",
+            "description": "CA Name"
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "aci": {
+            "description": "Member APIC",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciAddSite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDCNMAddMultiSite"
+              }
+            ]
+          }
+        },
+        "description": "Adding Site For inheritance only, Do not use separately"
+      },
+      "SmSiteRootCA": {
+        "title": "SmSiteRootCA",
+        "required": [
+          "certname"
+        ],
+        "type": "object",
+        "properties": {
+          "certname": {
+            "type": "string",
+            "description": "Name"
+          },
+          "cacert": {
+            "type": "string",
+            "description": "CA certificate for the site"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Root CA"
+      },
+      "_SmSiteRootCA": {
+        "title": "SmSiteRootCA",
+        "required": [
+          "certname"
+        ],
+        "type": "object",
+        "properties": {
+          "certname": {
+            "type": "string",
+            "description": "Name"
+          },
+          "cacert": {
+            "type": "string",
+            "description": "CA certificate for the site"
+          }
+        },
+        "description": "Root CA For inheritance only, Do not use separately"
+      },
+      "SmDeleteSite": {
+        "title": "SmDeleteSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "forceDelete": {
+            "type": "boolean",
+            "description": "ForceDelete"
+          },
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Deleting Site"
+      },
+      "_SmDeleteSite": {
+        "title": "SmDeleteSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "forceDelete": {
+            "type": "boolean",
+            "description": "ForceDelete"
+          },
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "description": "Deleting Site For inheritance only, Do not use separately"
+      },
+      "SmAciDeleteSite": {
+        "title": "SmAciDeleteSite",
+        "type": "object",
+        "properties": {
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "additionalProperties": false,
+        "description": "ACI related delete site info"
+      },
+      "_SmAciDeleteSite": {
+        "title": "SmAciDeleteSite",
+        "type": "object",
+        "properties": {
+          "loginDomain": {
+            "type": "string",
+            "description": "Login Domain"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "description": "ACI related delete site info For inheritance only, Do not use separately"
+      },
+      "SmDCNMDeleteSite": {
+        "title": "SmDCNMDeleteSite",
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM related deletesite info"
+      },
+      "_SmDCNMDeleteSite": {
+        "title": "SmDCNMDeleteSite",
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "description": "DCNM related deletesite info For inheritance only, Do not use separately"
+      },
+      "SmNDDeleteSite": {
+        "title": "SmNDDeleteSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "forceDelete": {
+            "type": "boolean",
+            "description": "ForceDelete"
+          },
+          "verifySecure": {
+            "type": "boolean",
+            "description": "Verify Root CA"
+          },
+          "caName": {
+            "type": "string",
+            "description": "CA Name"
+          },
+          "aci": {
+            "description": "Member APIC",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciDeleteSite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDCNMDeleteSite"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Deleting Site"
+      },
+      "_SmNDDeleteSite": {
+        "title": "SmNDDeleteSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "forceDelete": {
+            "type": "boolean",
+            "description": "ForceDelete"
+          },
+          "verifySecure": {
+            "type": "boolean",
+            "description": "Verify Root CA"
+          },
+          "caName": {
+            "type": "string",
+            "description": "CA Name"
+          },
+          "aci": {
+            "description": "Member APIC",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciDeleteSite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDCNMDeleteSite"
+              }
+            ]
+          }
+        },
+        "description": "Deleting Site For inheritance only, Do not use separately"
+      },
+      "SmModifySite": {
+        "title": "SmModifySite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Modifying Site"
+      },
+      "_SmModifySite": {
+        "title": "SmModifySite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "description": "Modifying Site For inheritance only, Do not use separately"
+      },
+      "SmNDModifySite": {
+        "title": "SmNDModifySite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display Name"
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "aci": {
+            "description": "Member APIC",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciModifySite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmModifySite"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Modifying Site"
+      },
+      "_SmNDModifySite": {
+        "title": "SmNDModifySite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display Name"
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Longitude"
+          },
+          "aci": {
+            "description": "Member APIC",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmAciModifySite"
+              }
+            ]
+          },
+          "dcnm": {
+            "description": "Member DCNM",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmModifySite"
+              }
+            ]
+          }
+        },
+        "description": "Modifying Site For inheritance only, Do not use separately"
+      },
+      "SmNDCleanupSiteState": {
+        "title": "SmNDCleanupSiteState",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "SiteName"
+          },
+          "all": {
+            "type": "boolean",
+            "description": "cleanup all site processing states"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Cleanup site processing map"
+      },
+      "_SmNDCleanupSiteState": {
+        "title": "SmNDCleanupSiteState",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "SiteName"
+          },
+          "all": {
+            "type": "boolean",
+            "description": "cleanup all site processing states"
+          }
+        },
+        "description": "Cleanup site processing map For inheritance only, Do not use separately"
+      },
+      "SmAciModifySite": {
+        "title": "SmAciModifySite",
+        "type": "object",
+        "properties": {
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "additionalProperties": false,
+        "description": "ACI related modify site info"
+      },
+      "_SmAciModifySite": {
+        "title": "SmAciModifySite",
+        "type": "object",
+        "properties": {
+          "inbandEpgDN": {
+            "type": "string",
+            "description": "Inband EPG DN"
+          }
+        },
+        "description": "ACI related modify site info For inheritance only, Do not use separately"
+      },
+      "SmDcnmModifySite": {
+        "title": "SmDcnmModifySite",
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "DCNM login name"
+          },
+          "password": {
+            "type": "string",
+            "description": "DCNM login passwd"
+          }
+        },
+        "description": "DCNM related modify site info For inheritance only, Do not use separately"
+      },
+      "SmDcnmCredential": {
+        "title": "SmDcnmCredential",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Site Name"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM loggin credentials"
+      },
+      "_SmDcnmCredential": {
+        "title": "SmDcnmCredential",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Site Name"
+          }
+        },
+        "description": "DCNM loggin credentials For inheritance only, Do not use separately"
+      },
+      "SmDcnmCredentialResp": {
+        "title": "SmDcnmCredentialResp",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM Credential Response"
+      },
+      "_SmDcnmCredentialResp": {
+        "title": "SmDcnmCredentialResp",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Site Name"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "description": "DCNM Credential Response For inheritance only, Do not use separately"
+      },
+      "SmDcnmInternalBinding": {
+        "title": "SmDcnmInternalBinding",
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "siteList": {
+            "type": "object",
+            "description": "DCNM Sites"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM Controller internal object "
+      },
+      "_SmDcnmInternalBinding": {
+        "title": "SmDcnmInternalBinding",
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "siteList": {
+            "type": "object",
+            "description": "DCNM Sites"
+          }
+        },
+        "description": "DCNM Controller internal object  For inheritance only, Do not use separately"
+      },
+      "SmDcnmPreBoard": {
+        "title": "SmDcnmPreBoard",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Pre boarding DCNM Sites"
+      },
+      "_SmDcnmPreBoard": {
+        "title": "SmDcnmPreBoard",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "userName": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password"
+          }
+        },
+        "description": "Pre boarding DCNM Sites For inheritance only, Do not use separately"
+      },
+      "SmDcnmPreboardResp": {
+        "title": "SmDcnmPreboardResp",
+        "type": "object",
+        "properties": {
+          "siteList": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Site List",
+            "items": {
+              "description": "Member DCNM Site Resp",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDCNMSiteResp"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM Preboard Response"
+      },
+      "_SmDcnmPreboardResp": {
+        "title": "SmDcnmPreboardResp",
+        "type": "object",
+        "properties": {
+          "siteList": {
+            "minItems": 0,
+            "type": "array",
+            "description": "Site List",
+            "items": {
+              "description": "Member DCNM Site Resp",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SmDCNMSiteResp"
+                }
+              ]
+            }
+          }
+        },
+        "description": "DCNM Preboard Response For inheritance only, Do not use separately"
+      },
+      "SmDCNMSiteResp": {
+        "title": "SmDCNMSiteResp",
+        "type": "object",
+        "properties": {
+          "fabricName": {
+            "type": "string",
+            "description": "Fabric Name"
+          },
+          "parentFabricName": {
+            "type": "string",
+            "description": "Parent Fabric Name"
+          },
+          "fabricType": {
+            "description": "DCNM Fabric type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricType"
+              }
+            ]
+          },
+          "fabricTechnology": {
+            "description": "DCNM Fabric Technology",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricTechnology"
+              }
+            ]
+          },
+          "inUse": {
+            "type": "boolean",
+            "description": "Already Enabled or Not"
+          }
+        },
+        "additionalProperties": false,
+        "description": "DCNM Site Response"
+      },
+      "_SmDCNMSiteResp": {
+        "title": "SmDCNMSiteResp",
+        "type": "object",
+        "properties": {
+          "fabricName": {
+            "type": "string",
+            "description": "Fabric Name"
+          },
+          "parentFabricName": {
+            "type": "string",
+            "description": "Parent Fabric Name"
+          },
+          "fabricType": {
+            "description": "DCNM Fabric type",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricType"
+              }
+            ]
+          },
+          "fabricTechnology": {
+            "description": "DCNM Fabric Technology",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SmDcnmFabricTechnology"
+              }
+            ]
+          },
+          "inUse": {
+            "type": "boolean",
+            "description": "Already Enabled or Not"
+          }
+        },
+        "description": "DCNM Site Response For inheritance only, Do not use separately"
+      },
+      "SmNDGetFedSite": {
+        "title": "SmNDGetFedSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "DisplayName"
+          }
+        },
+        "additionalProperties": false,
+        "description": "NDGetFedSite"
+      },
+      "_SmNDGetFedSite": {
+        "title": "SmNDGetFedSite",
+        "type": "object",
+        "properties": {
+          "actionID": {
+            "type": "string",
+            "description": "Action Id"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "DisplayName"
+          }
+        },
+        "description": "NDGetFedSite For inheritance only, Do not use separately"
+      }
+    }
+  }
+}
