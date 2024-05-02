@@ -117,18 +117,18 @@ export const getCleanObject = obj => {
   const decorate = obj => {
     return {
       ...obj,
-      removeUndefinedFields: function removeUndefinedFields() {
+      removeUndefinedAndNullFields: function removeUndefinedAndNullFields() {
         const entries = Object.entries(this);
         if (entries.length === 0) return this;
 
         entries.forEach(([key, value]) => {
-          if (this[key] === undefined) {
+          if (this[key] === undefined || value === null) {
             delete this[key];
           }
 
           const isObjectNotArray = typeof this[key] === 'object' && !Array.isArray(value);
           if (isObjectNotArray) {
-            removeUndefinedFields.bind(this[key])();
+            removeUndefinedAndNullFields.bind(this[key])();
           }
         });
         return this;
@@ -153,7 +153,7 @@ export const getCleanObject = obj => {
   };
 
   const decoratedObject = decorate(obj);
-  return decoratedObject.removeUndefinedFields().cleanArrayFields().omitFunctionFields();
+  return decoratedObject.removeUndefinedAndNullFields().cleanArrayFields().omitFunctionFields();
 };
 
 export const mapStatusCodeToType = (code: number) => {
